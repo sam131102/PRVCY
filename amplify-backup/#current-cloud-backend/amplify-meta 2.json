@@ -1,0 +1,16 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-prvcy-staging-50619-authRole",
+      "UnauthRoleArn": "arn:aws:iam::952490130013:role/amplify-prvcy-staging-50619-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::952490130013:role/amplify-prvcy-staging-50619-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-prvcy-staging-50619-deployment",
+      "UnauthRoleName": "amplify-prvcy-staging-50619-unauthRole",
+      "StackName": "amplify-prvcy-staging-50619",
+      "StackId": "arn:aws:cloudformation:ca-central-1:952490130013:stack/amplify-prvcy-staging-50619/b3d4f680-8ce2-11ee-9faf-02fef5a878fa",
+      "AmplifyAppId": "d1rqbm6xizttiw"
+    }
+  },
+  "auth": {}
+}

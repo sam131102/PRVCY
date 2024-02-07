@@ -1,0 +1,31 @@
+<div class="row justify-content-center">
+  <div class="col text-center">
+    <div>
+      <h1 class="text-center">Video Recording</h1>
+    </div>
+      <div class="form-group text-center"> 
+        <label for="videoName" style="color: #194a81">Video Name:</label>
+        <div class="video-name-group">
+          <input type="text" id="videoName" [(ngModel)]="videoName" (input)="onVideoNameChange()" class="form-control"/>
+          <button class="btn btn-sm btn-success button-record" [disabled]="isSubmitDisabled" (click)="submitVideo()">Submit</button>
+        </div>
+      </div>
+      <div class="video-container row mb-2">
+        <div id="video" class="col">
+          <video #video class="video"></video>
+        </div>
+      </div>
+      <div class="form-group text-center"> 
+        <div class="addcomment-group d-flex flex-row align-items-center">
+          <!--<label for="addCommentTextArea" style="color: #194a81">Add Comment</label> -->
+          <textarea id="addCommentTextArea" class="form-control" rows="6" placeholder="Anything to add?"></textarea>
+          <button id="addCommentTextArea" class="btn btn-sm btn-success button-record" (click)="submitVideo()">Add Comment</button>
+        </div>
+      </div>
+      <div id="buttons" class="row">
+        <button class="btn btn-sm btn-success button-record" (click)="startRecordingButtonClicked()"> Record </button>
+        <button class="btn btn-sm btn-success button-record" (click)="stopRecording()"> Stop</button>
+        <button class="btn btn-sm btn-success button-record" (click)="playback()"> Playback</button>
+      </div>
+  </div>
+</div>

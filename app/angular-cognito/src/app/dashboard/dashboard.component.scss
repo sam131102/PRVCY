@@ -1,0 +1,163 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+//$primary-1: #194a81;
+$primary-1: #e7e7e7;
+//$primary-2: #0097b2;
+$primary-2: #e7e7e7;
+
+div.row.justify-content-center {
+    margin: 0;
+    padding: 225px 100px 400px;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+}
+
+div.col-4 {
+    display: flex;
+    justify-content: center;
+}
+
+div.col.mb-2 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+form {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+div.card {
+    width: 70%;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+//Remove the white spaces on the edge of the screen
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+//Rectangle Box Content (Video Recording Box)
+.rectangle-box {
+    position: relative;
+    background-color: white;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    height: 98%;
+    border-radius: 20px;
+}
+
+.rectangle-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10%;
+    padding-bottom: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+//Square Box Content (Organizations, Chats)
+.square-box {
+    width: 100%;
+    padding-top: 60%;
+    position: relative;
+    background-color: white;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 20px;
+}
+
+.square-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10%;
+    padding-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+//Title Styling
+.title {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 20px;
+}
+
+//Button Styling
+button {
+    //margin-top: 20px;
+    background-color: #194a81;
+    width: 17%;
+}
+
+button:hover {
+    background-color: $primary-2;
+}
+
+.button {
+    flex: 0;
+    margin-left: 10px;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    width: 5em;
+    height: 2.5em;
+    display: block;
+    font-size: 1em;
+    display: flex;
+}
+
+.button:hover {
+    background-color: #0097b2;
+}
+  
+.btn-sm {
+    padding: 5px 70px;
+    font-size: 15px;
+    text-align: center;
+    display: flex;
+}
+
+.content-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.content-row p {
+    font-size: 15px;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}

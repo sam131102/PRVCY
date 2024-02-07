@@ -1,0 +1,38 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <div class="square-box">
+        <div class="square-content">
+          <div class="title">Organizations</div>
+          <div class="content-row">
+            <p>Current Organization</p>
+            <button class="btn btn-sm btn-success button">{{user['custom:organization']}}</button>
+          </div>
+          <div class="content-row">
+            <p>Join Organization</p>
+            <button mat-raised-button (click)="openDialog()" class="btn btn-sm btn-success button">Join</button>
+          </div>
+        </div>
+      </div>
+      <div class="square-box">
+        <div class="square-content">
+          <div class="title">Record a Video</div>
+          <div class="content-row">
+            <button class="btn btn-sm btn-success button" routerLink="/video-recorder" routerLinkActive="active" *ngIf="isAuthenticated">Record</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="rectangle-box">
+        <div class="rectangle-content">
+          <div class="title">Inbox</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "resourceName": "s3prvcystorageba20e15b",
+  "bucketName": "prvcy-storage-ba20e15b",
+  "policyUUID": "1cfff590",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

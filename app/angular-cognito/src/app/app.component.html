@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/dashboard" routerLinkActive="active" *ngIf="isAuthenticated">Prvcy Video
+      Sharing</a>
+    <a class="navbar-brand" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated">Prvcy Video
+      Sharing</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbarContent" class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isAuthenticated">Hello,
+            {{user.given_name}}!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signUp" routerLinkActive="active" *ngIf="!isAuthenticated">Sign up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isAuthenticated">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/support" routerLinkActive="active" *ngIf="isAuthenticated">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/video-recorder" routerLinkActive="active"
+            *ngIf="isAuthenticated && user['custom:account_type']=='personal'">Create a new video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/video-list" routerLinkActive="active"
+            *ngIf="isAuthenticated">Video Archive</a>
+        </li>
+        <!-- signout to right margin -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="" (click)="signOut()" *ngIf="isAuthenticated" id="signOut">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+<app-chatbot></app-chatbot>

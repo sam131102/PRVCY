@@ -1,0 +1,9 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary-1: #194a81;
+$primary-2: #0097b2;
+
+div.card {
+    background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+    padding-top: 410px;
+    padding-bottom: 410px;
+}

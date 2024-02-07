@@ -1,0 +1,63 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="row justify-content-center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="header">
+          <p class="header-text">PRVCY</p>
+          <hr>
+          <p class="subheader-text">Video Sharing</p>
+        </div>
+        <div *ngIf="errorMessage" class="row">
+          <div class="col">
+            <div class="alert alert-danger">
+              {{ errorMessage }}
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Username or Email: </mat-label>
+              <input class="matInput" matInput type="email" id="email" name="email" #email="ngModel" [(ngModel)]="user.email">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel" for="password">Password: </mat-label>
+              <input matInput [type]="hide? 'password' : 'text'" id="password" name="password" #password="ngModel"
+              [(ngModel)]="user.password">
+              <button id="maticon" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row" id="signInRow">
+          <div class="col d-grid">
+            <button type="button" (click)="signIn()" class="btn btn-sm btn-success" [disabled]="loading">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+              Sign in
+            </button>
+          </div>
+        </div>
+        <div class="row" id="signUpRow">
+          <div class="col d-grid">
+            <p><i>Don't have an account?</i></p>
+            <button type="button" routerLink="/signUp" class="btn btn-sm btn-success" [disabled]="loading"
+              id="signUpButton">
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+              Sign up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,104 @@
+// video-list.component.scss
+$primary-1: #194a81;
+$primary-2: #0097b2;
+$button-colour: #ff4f4f;
+$page-font: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+.card {
+  background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+  padding-top: 10px;
+  padding-bottom: 850px;
+}
+
+.video-list-container {
+  text-align: left;
+  padding: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  position: relative;
+}
+
+.heading-container {
+  position: sticky;
+  top: 0;
+  background-color: $primary-2;
+  padding: 10px;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.video-item {
+  width: calc(40% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+video {
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 1px 6px 10px 2px rgba(35, 35, 35, 0.62);
+  border: 2px solid #D3FFE9;
+}
+
+.scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: $button-colour;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 1px 6px 10px 2px rgba(35, 35, 35, 0.62);
+}
+
+.scroll-arrow.left {
+  left: 0;
+}
+
+.scroll-arrow.right {
+  right: 0;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .video-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+}
+.contact-list {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 1px 6px 10px 2px rgba(35, 35, 35, 0.62);
+  margin-left: 20px;
+  align-self: flex-start;
+}
+
+.contact-list p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 5px;
+}
