@@ -1,0 +1,61 @@
+section{
+    padding: 10% 0% 10% 20%;
+    background-image: url("/assets/background.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.welcome{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+    color: white;
+}
+
+.welcome-text h1{
+    font-size: 90px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.welcome-text p{
+    font-size: 15px;
+    margin-bottom: 2em;
+}
+
+.button{
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid transparent;
+    color: white;
+    font-weight: bold;
+    background-color: #194a81;
+    padding: 20px;
+    text-transform: uppercase;
+    transition: all .6s ease;
+    text-decoration: none;
+}
+
+#learn-more{
+    margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.button:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    transform: translateX(10px);
+}

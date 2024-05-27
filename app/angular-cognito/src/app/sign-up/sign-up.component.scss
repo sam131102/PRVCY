@@ -1,0 +1,126 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary-1: #194a81;
+$primary-2: #0097b2;
+$button-colour: #ff4f4f;
+
+div.row.justify-content-center {
+    margin: 0;
+    padding: 98px;
+    padding-bottom: 68px;
+    padding-top: 64px;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+}
+
+label.form-label {
+    font-family: $page-font;
+    color: $primary-2
+}
+
+#submit {
+    font-size: 18px;
+    font-family: $page-font;
+    padding: 8px;
+    background-color: $button-colour;
+    border-radius: 25px;
+    border: 0;
+}
+
+p.header-text {
+    margin: 0;
+    color: $primary-1;
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+    border-top: 3px double $primary-1;
+    color: $primary-1;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr::after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+p.subheader-text {
+    color: $primary-1;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $page-font;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+div.col.d-grid {
+    padding-top: 12px;
+}
+
+div.row p {
+    margin: 0;
+}
+
+div.card {
+    border-radius: 25px;
+    //border: 2px solid $primary-2;
+    box-shadow: 10px 10px 3px #d9d9d9;
+}
+
+.form-control.form-control-sm {
+    border-radius: 7px;
+}
+
+div.col-4 {
+    width: 30%;
+}
+
+@media only screen and (max-width: 1500px) {
+    p.header-text {
+        font-size: 62px;
+    }
+
+    p.subheader-text {
+        font-size: 15px;
+    }
+
+    label.form-label {
+        font-size: 14px;
+        
+    }
+
+    p i {
+        font-size: 12px;
+    }
+
+    div.row.justify-content-center {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.matFormField{
+    width: 100%;
+}
+.matLabel{
+    color:#194a81;
+}
+.matInput{
+    border: #0097b2;
+    border-width: thick;
+}
+#maticon{
+    background-color: white;
+    border: white;
+    width: 50%;
+}

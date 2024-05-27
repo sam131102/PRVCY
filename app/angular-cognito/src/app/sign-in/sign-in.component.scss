@@ -1,0 +1,163 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary-1: #194a81;
+$primary-2: #0097b2;
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+label.form-label {
+    font-family: $page-font;
+    color: $primary-2
+}
+
+button.btn.btn-sm.btn-success {
+    font-size: 18px;
+    font-family: $page-font;
+    padding: 8px;
+    background-color: $primary-1;
+    border-radius: 25px;
+}
+
+div.card-body {
+    padding: 32px;
+}
+
+div.row {
+    padding-bottom: 64px;
+}
+
+div.row:nth-child(2) {
+    padding-bottom: 32px;
+}
+
+div.row:nth-child(3) {
+    padding-bottom: 32px;
+}
+
+div.col-4 {
+    margin-top: 64px;
+    width: 500px;
+}
+
+div.row.justify-content-center {
+    margin: 0;
+    padding: 8px 99px 600px;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+}
+
+div.card {
+    border-radius: 25px;
+    //border: 2px solid $primary-2;
+    box-shadow: 10px 10px 3px #d9d9d9;
+}
+
+.form-control.form-control-sm {
+    border-radius: 7px;
+}
+
+label.form-label {
+    font-size: 18px;
+    padding-left: 3px;
+}
+
+p.header-text {
+    margin: 0;
+    color: $primary-1;
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr {
+    margin: 0;
+    border-top: 3px double $primary-1;
+    color: $primary-1;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr::after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+p.subheader-text {
+    color: $primary-1;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $page-font;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+#signUpButton {
+    background-color: #ff4f4f;
+    border: none;
+}
+
+#signInRow {
+    padding-bottom: 32px;
+}
+
+#signUpRow {
+    padding-bottom: 32px;
+}
+
+@media only screen and (max-width: 1500px) {
+    p.header-text {
+        font-size: 62px;
+    }
+
+    p.subheader-text {
+        font-size: 15px;
+        padding-bottom: 0;
+    }
+
+    label.form-label {
+        font-size: 14px;
+    }
+
+    p i {
+        font-size: 12px;
+    }
+
+    div.row.justify-content-center {
+        padding-top: 70px;
+        padding-bottom: 100px;
+    }
+
+    div.row:nth-child(4) {
+        padding: 0;
+    }
+
+    div.col-4 {
+        width: 30%;
+    }
+}
+
+.matFormField{
+    width: 100%;
+}
+.matLabel{
+    color:#194a81;
+}
+.matInput{
+    border: #0097b2;
+    border-width: thick;
+}
+#maticon{
+    background-color: white;
+    border: white;
+    width: 50%;
+}

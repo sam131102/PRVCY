@@ -1,0 +1,54 @@
+$primary-1: #194a81;
+$primary-2: #194a81;
+$button-colour: #ff4f4f;
+$page-font: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$text-color: #ffffff;
+
+::ng-deep .mat-dialog-container {
+  background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+  color: $text-color;
+  font-family: $page-font;
+}
+
+::ng-deep .mat-dialog-title {
+  color: $text-color;
+  font-size: 1.5em;
+}
+
+::ng-deep .mat-dialog-content {
+  padding: 20px;
+  font-size: 1em;
+  color: $text-color;
+}
+
+::ng-deep .mat-dialog-actions {
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-top: 1px solid darken($primary-1, 10%);
+  display: flex;
+  justify-content: flex-end;
+}
+
+::ng-deep .mat-button {
+  color: $text-color;
+  background-color: $button-colour;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: darken($button-colour, 10%);
+  }
+}
+
+::ng-deep .mat-button.mat-dialog-close {
+  background-color: transparent;
+  color: $text-color;
+  box-shadow: none;
+  padding: 0;
+}

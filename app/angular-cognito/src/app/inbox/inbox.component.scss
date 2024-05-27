@@ -1,0 +1,65 @@
+$primary-1: #9d9d9d;
+$primary-2: #0097b2;
+$background-color: #1A1A1A;
+$text-color: #FFFFFF;
+$nav-font: 'Lato', sans-serif;
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(to right, #0097b2, #194a81);
+  font-family: 'Lato', sans-serif;
+}
+
+.request-item {
+  border: 1px solid $primary-2;
+  background-color: $background-color;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: $nav-font;
+  font-size: 16px;
+  color: $text-color;
+  border-radius: 25px;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  box-shadow: none;
+}
+
+.pending-requests-container { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, #0097b2, #194a81);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: auto;
+  padding: 10px 0;
+}
+
+.request-item button {
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: background-color 0.3s;
+  font-family: $nav-font;
+  font-size: 14px;
+}
+
+.request-item button:hover {
+  background-color: darken($primary-2, 10%);
+}
+.profile-image {
+  width: 60px;
+  height: 60px;
+}

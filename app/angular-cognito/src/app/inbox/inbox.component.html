@@ -1,0 +1,12 @@
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="pendingRequests.success && pendingRequests.data.length > 0" class="pending-requests-container">
+  <div *ngFor="let request of pendingRequests.data" class="request-item">
+    <div>
+      Video Request: {{ removeFolderName(request.video_key) }} from {{ request.sender_id }}
+      <button (click)="respondToRequest(request.id, 'accept')"><img src="assets/accept.png" alt="Profile Image" class="profile-image"></button>
+      <button (click)="respondToRequest(request.id, 'deny')"><img src="assets/delete.png" alt="Profile Image" class="profile-image"></button>
+    </div>
+  </div>
+</div>

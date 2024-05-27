@@ -1,0 +1,71 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+$primary-1: #194a81;
+$primary-2: #0097b2;
+
+$button-colour: #ff4f4f;
+
+div.justify-content-center {
+    padding-top: 193px;
+    padding-bottom: 850px;
+    background-image: linear-gradient(to bottom, $primary-1, $primary-2);
+}
+
+.avatars {
+    text-align: center;
+    position: relative;
+}
+
+.avatar-choice {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+
+.avatarImage {
+    text-align: center;
+    position: relative;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+div.col-4 {
+    width: 30%;
+    margin-left: 600px;
+}
+
+div.row {
+    padding-bottom: 20px;
+}
+
+input {
+    border-radius: 8px;
+}
+
+button {
+    border-radius: 8px;
+    background-color: $primary-1;
+}
+
+@media only screen and (max-width: 1500px) {
+    div.row.justify-content-center {
+        padding-top: 160px;
+        padding-bottom: 300px;
+    }
+}
+
+.matFormField{
+    width: 100%;
+}
+.matLabel{
+    color:#194a81;
+}
+.matInput{
+    border: #0097b2;
+    border-width: thick;
+}

@@ -1,0 +1,30 @@
+<div class="card">
+  <div class="video-list-container">
+    <div class="row">
+      <div class="video-container">
+        <ng-container *ngIf="recentVideo">
+          <video controls crossorigin="anonymous">
+            <source [src]="getVideoUrl(recentVideo.key)" type="video/webm">
+            <track [src]="getCaptionsUrl(recentVideo.key)" label="English" kind="subtitles" srclang="en-us" default>
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-metadata">
+            <p>{{ recentVideo.name }}</p>
+            <p>Date: {{ recentVideo.date }}</p>
+            <p>Creator: {{ recentVideo.creator }}</p>
+          </div>
+        </ng-container>
+        <ng-template #noVideos>
+          <p>No recent videos available.</p>
+        </ng-template>
+      </div>
+      <div class="contact-list">
+        <p>Select Contact:</p>
+        <select [(ngModel)]="selectedContact">
+          <option *ngFor="let contact of contactList" [value]="contact">{{ contact.username }}</option>
+        </select>
+        <button (click)="sendVideoToContact(selectedContact)">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

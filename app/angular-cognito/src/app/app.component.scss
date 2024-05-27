@@ -1,0 +1,97 @@
+//$primary-1: #194a81;
+$primary-1: #9d9d9d;
+$primary-2: #0097b2;
+$nav-font: 'Lato', sans-serif;
+
+.container-fluid {
+  //background-color: $primary-1;
+  font-family: $nav-font;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.navbar-logo {
+  width: auto;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.navbar-toggler {
+  margin-top: 10px;
+}
+.navbar-brand {
+  font-size: 20px;
+  color: white;
+}
+
+#navbarContent {
+  font-weight: regular;
+  font-size: 18px;
+  display: flex;
+  a:hover {
+    color: lightblue;
+  }
+}
+
+a.nav-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 100%;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#signOut {
+  align-self: center;
+  padding: 20px 25px;
+}
+
+.vertical-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 300px;
+  background-color: $primary-1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: width 0.3s ease;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur;
+
+  &.collapsed {
+    width: 100px;
+
+    .nav-link span, .navbar-toggler span {
+      display: none;
+    }
+
+    .profile-icon, .toggle-icon {
+      margin: 0 auto;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.content {
+  transition: padding-left 0.3s ease;
+  padding-left: 300px;
+
+  &.navbar-collapsed {
+    padding-left: 100px;
+  }
+}
+
+.profile-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}

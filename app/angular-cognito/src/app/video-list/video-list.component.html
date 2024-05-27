@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="video-list-container">
+    <h2 class="heading-container">My Videos</h2>
+    <div *ngIf="videos.length === 0; else videoList">
+      <p>No videos available.</p>
+    </div>
+    <ng-template #videoList>
+      <div class="row">
+        <div *ngFor="let video of videos" class="video-item">
+          <div *ngIf="accountType === 'personal'" class="checkbox-container">
+            <input type="checkbox" name="selectedVideos" [(ngModel)]="video.isSelected" class="video-checkbox">
+          </div>
+          <video controls crossorigin="anonymous">
+            <source [src]="getVideoUrl(video.key)" type="video/webm">
+            <!-- <track [src]="getCaptionsUrl(video.key)" label="English" kind="subtitles" srclang="en-us" default> -->
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-metadata">
+            <p>{{ video.name }}</p>
+            <p>Date: {{ video.date }}</p>
+            <p>Creator: {{ video.creator }}</p>
+            <p *ngFor="let item of comment">Comment: {{item.comment}}</p>
+            
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <div *ngIf="accountType === 'business'" class="notification-area">
+    <h3>Notification Requests</h3>
+    <p>Notification content goes here...</p>
+  </div>
+  
+<div *ngIf="accountType === 'personal'" class="heading-container">
+
+  <h3>Send Your Video!</h3>
+  <p>Checkbox-selected videos can be sent here...</p>
+  <div class="contact-list">
+    <p>Select Contact:</p>
+    <select [(ngModel)]="selectedContact">
+      <option *ngFor="let contact of contactList" [ngValue]="contact.username">{{ contact.username }}</option>
+    </select>
+    
+    <button (click)="sendSelectedVideosToContact(selectedContact)">Send</button>
+  </div>
+</div>
+</div>

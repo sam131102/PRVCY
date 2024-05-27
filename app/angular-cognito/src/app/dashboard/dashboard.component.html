@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    <section class="welcome">
+      <div class="welcome-text">
+        <h1>WELCOME TO PRVCY</h1>
+        <p>PRVCY is more than just a video sharing platform. We value the importance of privacy and security when sharing videos with other users on the platform. 
+          We are able to provide a high quality service through leveraging a variety of AWS services.</p>
+          <a class="button" routerLink="/video-recorder" routerLinkActive="active" *ngIf="isAuthenticated">Get Started</a>
+          <a class="button" id="learn-more" routerLink="/support" routerLinkActive="active" *ngIf="isAuthenticated">About Us</a>
+        </div>
+        <div class="welcome-img">
+          <img src="../assets/PRVCY-Welcome.png" alt="PRVCY Logo">
+        </div>
+    </section>
+  </body>
+</html>

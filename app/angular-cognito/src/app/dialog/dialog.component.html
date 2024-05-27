@@ -1,0 +1,15 @@
+ng add @angular/material<h1 mat-dialog-title>Add a new organization?</h1>
+<div mat-dialog-content>
+  <p></p>
+  <div class="row">
+    <form (ngSubmit)="joinOrg(organization.value)">
+      <label class="form-label">Type the code here to join:</label>
+      <input type="text" id="organization" name="organization" #organization="ngModel"
+        [(ngModel)]="user['custom:organization']" class="form-control form-control-sm">
+      <button type="submit" class="btn btn-sm btn-success" [disabled]="loading">Join</button>
+    </form>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button class="btn btn-sm btn-success" (click)="closeDialog()">Close</button>
+</div>

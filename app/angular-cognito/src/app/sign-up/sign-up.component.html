@@ -1,0 +1,104 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="row justify-content-center">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <div class="col-4">
+    <div class="card">
+      <div class="card-body">
+        <div class="header">
+          <p class="header-text">PRVCY</p>
+          <hr>
+          <p class="subheader-text">Video Sharing</p>
+        </div>
+        <form #f="ngForm" name="theForm">
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Email: </mat-label>
+              <input name="email" class="matInput" matInput placeholder="user@example.com" [formControl]="email" required [(ngModel)]="user.email">
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Username: </mat-label>
+              <input name="username" class="matInput" matInput placeholder="user123" required [(ngModel)]="user.username">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel" for="password">Password: </mat-label>
+              <input name="password" matInput [type]="hide ? 'password' : 'text'"  [formControl]="$any(password)" required [(ngModel)]="user.password">
+              <button id="maticon" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon id="eye">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error *ngIf="password.invalid">{{getPasswordErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Name: </mat-label>
+              <input name="firstname" class="matInput" matInput required [(ngModel)]="user.given_name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Family Name: </mat-label>
+              <input name="lastname" class="matInput" matInput  required [(ngModel)]="user.family_name">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+            <mat-label Class="matLabel">Birthdate</mat-label>
+            <input name="birthdate" matInput [matDatepicker]="picker" required [(ngModel)]="user.birthdate">
+              <mat-hint class="matLabel">MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Account type: </mat-label>
+              <mat-select name="accounttype" required id="account_type" name="account_type" [(ngModel)]="user['custom:account_type']">
+                <mat-option value="personal">Personal</mat-option>
+                <mat-option value="business">Business</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col mb-2">
+            <mat-form-field class="matFormField" appearance="outline">
+              <mat-label class="matLabel">Organization code: </mat-label>
+              <mat-hint>Enter your organization code if you have one.</mat-hint>
+              <input name="organization" class="matInput" matInput [(ngModel)]="user['custom:organization']">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-grid">
+            <input id="submit" name="signup" type="submit" (click)="signUp(user.username, user['custom:organization'], f)" class="btn btn-sm btn-success"
+              [disabled]="loading">  
+              <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="loading"></span>
+          </div>
+        </div>
+      </form>
+      </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <nav [class.collapsed]="isNavbarCollapsed" class="vertical-navbar">
+      <a class="navbar-brand" routerLink="/dashboard" routerLinkActive="active" *ngIf="isAuthenticated">PRVCY</a>
+      <a class="navbar-brand" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated">PRVCY</a>
+      <button (click)="toggleNavbar()" class="navbar-toggler"><img src="assets/more.png" alt="Profile Image" class="profile-image"></button>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+      <div class="container-fluid">
+        <!--Home Icon, maybe keep it?-->
+        <!--<a class="nav-link" routerLink="/dashboard" routerLinkActive="active" *ngIf="isAuthenticated"><img src="assets/home-icon.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Home</span></a>--> 
+        <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isAuthenticated"><img src="assets/user.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Hello, {{user.given_name}}!</span></a>
+        <a class="nav-link" routerLink="/signUp" routerLinkActive="active" *ngIf="!isAuthenticated"><img src="assets/logout.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Sign Up</span></a>
+        <a class="nav-link" routerLink="/signIn" routerLinkActive="active" *ngIf="!isAuthenticated"><img src="assets/log-in.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Sign In</span></a>
+        
+        <a class="nav-link" routerLink="/video-recorder" routerLinkActive="active"
+          *ngIf="isAuthenticated && user['custom:account_type']=='personal'"><img src="assets/video.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Create a new Video</span></a>
+        <a class="nav-link" routerLink="/video-list" routerLinkActive="active"
+          *ngIf="isAuthenticated"><img src="assets/video-marketing.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Video Archive</span></a>
+          <a class="nav-link" routerLink="/inbox" routerLinkActive="active"
+          *ngIf="isAuthenticated"><img src="assets/mail.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Inbox</span></a>
+          <a class="nav-link" routerLink="/support" routerLinkActive="active" *ngIf="isAuthenticated"><img src="assets/group-icon.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Support</span></a>
+      <!-- signout to right margin -->
+        <a class="nav-link" routerLink="" (click)="signOut()" *ngIf="isAuthenticated" id="signOut"><img src="assets/logout.png" alt="Profile Image" class="profile-image"><span *ngIf="!isNavbarCollapsed">Sign Out</span></a>
+        </div>
+    </nav>
+    <div [class.navbar-collapsed]="isNavbarCollapsed" class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </body>
+</html>

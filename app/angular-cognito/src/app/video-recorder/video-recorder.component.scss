@@ -1,0 +1,120 @@
+section{
+  padding-top: 3%;
+  background-image: url("/assets/background.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-recording-page{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100,
+  "YTLC" 500;
+  color: white;
+}
+
+.title{
+  text-align: center;
+  font-size: 90px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.video-container-details{
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+}
+
+.video-container{
+  margin-left: 8em;
+}
+
+.video-container video{
+  position: relative;
+  width: 900px;
+  height: 600px;
+}
+
+.overlay{
+  position: absolute;
+  z-index: 1;
+}
+
+.overlay img{
+  height: 75px;
+  width: auto;
+  margin-top: 2.5em;
+  margin-left: 50em;
+}
+
+.video-details{
+  margin-right: 4em;
+  margin-left: 4em;
+}
+
+.toggleText{
+  margin-right: 10px;
+}
+
+.video-details mat-button-toggle{
+  height: 45px;
+  width: 45px;
+}
+
+.textbox-margin{
+  margin-top: 1em;
+}
+
+#videoName{
+  width: 300px;
+  height: 25px;
+}
+
+#commentArea{
+  width: 300px;
+  height: 200px;
+}
+
+.button{
+  font-size: x-small;
+  border-radius: 50px;
+  display: inline-block;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: bold;
+  background-color: #194a81;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: all .6s ease;
+  margin: 2em 0.5em;
+  &[disabled]{
+    background-color: rgb(122, 122, 122);
+    color: white;
+  }
+}
+
+.button:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  transform: translateX(5px);
+  &[disabled]{
+    background-color: rgb(122, 122, 122);
+  }
+}
+
+#stop-button:hover{
+  background-color: red;
+}
+
+#record-button{
+  width: 150px;
+}

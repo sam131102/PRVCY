@@ -1,0 +1,22 @@
+$page-font: Lato, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+$primary-1: #e7e7e7;
+$primary-2: #e7e7e7;
+$button-colour: #ff4f4f;
+
+.row {
+    font-family: $page-font;
+}
+
+#organization {
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #194a81;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: $primary-2;
+}
